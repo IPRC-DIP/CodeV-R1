@@ -1,0 +1,12 @@
+module multi_pipe_8bit#(
+    parameter size = 8
+)(
+          clk,      
+          rst_n,       
+          mul_a,       
+          mul_b, 
+          mul_en_in,
+ 
+          mul_en_out,      
+          mul_out    
+);

@@ -1,0 +1,9 @@
+`timescale 1ns/1ps
+module counter_12 
+(
+  input rst_n,
+  input clk,
+  input valid_count,
+
+  output reg [3:0] out
+);

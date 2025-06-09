@@ -1,0 +1,3 @@
+`timescale 1ns / 1ps
+
+module multi_booth_8bit (p, rdy, clk, reset, a, b);

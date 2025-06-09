@@ -1,0 +1,8 @@
+`timescale 1ns/1ns
+
+module JC_counter(
+   input                clk ,
+   input                rst_n,
+ 
+   output reg [63:0]     Q  
+);

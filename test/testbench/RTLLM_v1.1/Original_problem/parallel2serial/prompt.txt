@@ -1,0 +1,8 @@
+`timescale 1ns/1ns
+module parallel2serial(
+	input wire clk  ,
+	input wire rst_n  ,
+	input wire [3:0]d ,
+	output wire valid_out ,
+	output wire dout
+	);
