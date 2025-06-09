@@ -1,6 +1,8 @@
-![](assets/logo.jpg)
+<div align="center">
+  <img src="![](./assets/logo.jpg)" style="zoom:200%;" /> 
+</div>
 
-## CodeV-R1: Reasoning-Enhanced Verilog Generation
+# CodeV-R1: Reasoning-Enhanced Verilog Generation
 
 ![](assets/overview.png)
 
