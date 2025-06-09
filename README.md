@@ -9,7 +9,7 @@ This is the repository for the [CodeV-R1 website](https://iprc-dip.github.io/Cod
 Please cite the paper if you use the code, models or datasets from CodeV-R1.
 
 ```tex
-@misc{zhu2025codevr1reasoningenhancedveriloggeneration,
+@misc{zhu2025codevr1,
       title={CodeV-R1: Reasoning-Enhanced Verilog Generation}, 
       author={Yaoyu Zhu and Di Huang and Hanqi Lyu and Xiaoyun Zhang and Chongxiao Li and Wenxuan Shi and Yutong Wu and Jianan Mu and Jinghua Wang and Yang Zhao and Pengwei Jin and Shuyao Cheng and Shengwen Liang and Xishan Zhang and Rui Zhang and Zidong Du and Qi Guo and Xing Hu and Yunji Chen},
       year={2025},
