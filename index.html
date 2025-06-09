@@ -122,38 +122,38 @@
               <span class="author-block"><sup>4</sup>Cambricon Technologies</span>
             </div>
 
-            <!-- <div class="column has-text-centered">
+            <div class="column has-text-centered">
               <div class="publication-links">
-                <!-- PDF Link. ->
+                <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2407.10424" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2505.24183" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
                     <span>arXiv</span>
                   </a>
                 </span>
-                <!-- Code Link. ->
+                <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/iprc-dip/CodeV" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/iprc-dip/CodeV-R1" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
                   </a>
                 </span>
-                <!-- Model Link. ->
+                <!-- Model Link. -->
                 <span class="link-block">
-                  <a href="https://huggingface.co/yang-z"
+                  <a href="https://huggingface.co/collections/zhuyaoyu/codev-series-683f16115c357416e17b1bb5"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-cloud-download-alt"></i>
                     </span>
-                    <span>Download</span>
+                    <span>Model</span>
                   </a>
                 </span>
-                <!-- Raw data Link. ->
-                <span class="link-block">
+                <!-- Raw data Link. -->
+                <!-- <span class="link-block">
                   <a href="https://iprc-dip.github.io/Chip-Design-LLM-Zoo/"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -161,8 +161,8 @@
                     </span>
                     <span>Leaderboard</span>
                   </a>
-                </span>
-              </div> -->
+                </span> -->
+              </div>
             </div>
           </div>
         </div>
@@ -248,7 +248,6 @@
           </div>
         </div>
       </div> -->
-
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
@@ -266,6 +265,20 @@
             <img src="./static/images/result_v2.png">
             <p>For VerilogEval v2 and RTLLM v2.0, we evaluate all models in this table. The SR means Specification-to-RTL, while CC means Code Completion.</p>
             </p>
+            To better illustrate the superior performance of our model, we plot the accuracy of different models against the model size.
+            We plot both pass@1 (blue) and pass@5 (red) metrics in this figure.
+            We can see that our model achieves the best performance among all models with only 7B parameters. Notably, the pass@1 of our model surpasses most pass@5 metric of other models.
+            </p>
+            <img src="./static/images/rtllm_acc_vs_model_size.png">
+            We further plot the test-time scaling curves under varying token budgets. Notably, as the token length budget increases, our model demonstrates a faster growth rate in performance compared to DeepSeek-R1. When using estimated FLOPs as the metric, our model outperforms DeepSeek-R1 with fewer FLOPs, highlighting its superior efficiency in computation.
+            <div class="columns is-multiline">
+              <div class="column is-half"> <!-- 占50%宽度，可根据需求调整 -->
+                <img src="./static/images/rtllm_tts.png" alt="RTLLM TTS 结果">
+              </div>
+              <div class="column is-half">
+                <img src="./static/images/rtllm_tts_flops.png" alt="RTLLM TTS FLOPs 结果">
+              </div>
+            </div>
           </div>
         </div>
       </div>
