@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/logo.jpg" style="zoom:200%;" /> 
+  <img src="./assets/logo.jpg" style="zoom:500%;" /> 
 </div>
 
 # CodeV-R1: Reasoning-Enhanced Verilog Generation
