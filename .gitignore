@@ -1,8 +1,8 @@
 __pycache__/
-/data/
+test/data/
 results/
 tmp/
 temp/
-testbench/VerilogEval_v2.0.0/results/
-testbench/RTLLM_v1.1/cache/
+test/testbench/VerilogEval_v2.0.0/results/
+test/testbench/RTLLM_v1.1/cache/
 *.egg-info/

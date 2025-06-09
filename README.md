@@ -1,8 +1,10 @@
+![](assets/logo.jpg)
+
 ## CodeV-R1: Reasoning-Enhanced Verilog Generation
 
+![](assets/overview.png)
 
-
-CodeV-R1 is an innovative series of open-source, instruction-tuned Large Language Models (LLMs) specifically designed for the generation of high-quality Verilog code, addressing the challenges faced by existing models in this domain.
+CodeV-R1 is an innovative open-source Large Language Model (LLM) specifically designed for the generation of high-quality Verilog code, addressing the challenges faced by existing models in this domain.
 
 Currently we open-source our code for model testing. The code for SFT and RL training are coming soon!
 
