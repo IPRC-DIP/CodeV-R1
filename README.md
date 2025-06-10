@@ -1,6 +1,3 @@
-<div align="center">
-  <img src="./assets/logo.jpg" width="15%" /> 
-</div>
 
 # CodeV-R1: Reasoning-Enhanced Verilog Generation
 
