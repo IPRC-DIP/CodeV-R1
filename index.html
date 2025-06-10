@@ -171,7 +171,7 @@
   </section>
 
   <section class="section">
-    <div class="container is-max-desktop">
+    <div class="container is-max-desktop" style="margin-top: -2rem">
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -200,7 +200,7 @@
       </div>
       <!--/ Abstract. -->
       <!-- Overview. -->
-      <div class="columns">
+      <div class="columns" style="margin-top: 2rem">
         <div class="column">
           <h2 class="title is-3 is-centered has-text-centered">Overview</h2>
           <div class="content">
@@ -232,56 +232,55 @@
   </section>
 
   <section class="section">
-    <div class="container is-max-desktop">
-      <!-- <div class="columns is-centered">
-        <div class="column">
-          <div class="content">
-            <h2 class="title is-3"> Multi-level Code Summarization</h2>
-            <p>
-              Manual annotation is prohibitively time-consuming and costly. Hence, we employed GPT-3.5 to generate high-level summaries for each Verilog module as its requirement description. As analyzed in VerilogEval, when required for summarising, LLMs often produce verbose descriptions, preferring line-by-line explanations over high-level summaries. To address this issue, we introduce a multi-level summarization method, employing few-shot learning to guide GPT-3.5 in first producing detailed descriptions and then abstracting high-level summaries.
-            </p>
-            <p>
-              An actual example of the prompt for multi-level summarization. (a) The prompt provided to GPT-3.5. (b) An example of the demonstrations, with code, low-level descriptions, and high-level summaries. (c) Summaries responded from GPT-3.5 with and (d) without multi-level summarization.
-            </p>
-            <img src="./static/images/multilevel_sum_demo.png">
-            </p>
-          </div>
-        </div>
-      </div> -->
+    <div class="container is-max-desktop" style="margin-top: -2rem">
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
             <h2 class="title is-3"> Main Results </h2>
             <p>
-              We compares the main results of our CodeV-R1 with baseline methods on the VerilogEval v1/v2 and RTLLM v1.1/v2.0 benchmarks. 
+              We compare the main results of our CodeV-R1 with baseline methods on the VerilogEval v1/v2 and RTLLM v1.1/v2.0 benchmarks. 
               Here we present the results of our distilled model and RL model. For baseline comparisons, we manually tested GPT, DeepSeek, and Qwen models, while sourcing results from RTLCoder, BetterV, CodeV, and CraftRTL.
             </p>
-            <p>
-              Our CodeV-R1 model achieves 68.6% and 72.9% pass@1 accuracy on VerilogEval v2 and RTLLM v1.1, respectively. On RTLLM v1.1, it outperforms previous state-of-the-art models by approximately 20%, and surpasses the 671B DeepSeek-R1 on both RTLLM v1.1 and v2.0.
-            </p>
-            <p>The following two tables are results on VerilogEval v1 / RTLLM v1.1, and VerilogEval v2 / RTLLM v2.0.</p>
-            <img src="./static/images/result_v1.png">
-            <p>For VerilogEval v1 and RTLLM v1.1, we evaluate the models with *, while other results are sourced from their papers.</p>
-            <img src="./static/images/result_v2.png">
-            <p>For VerilogEval v2 and RTLLM v2.0, we evaluate all models in this table. The SR means Specification-to-RTL, while CC means Code Completion.</p>
-            </p>
-            To better illustrate the superior performance of our model, we plot the accuracy of different models against the model size.
-            We plot both pass@1 (blue) and pass@5 (red) metrics in this figure.
-            We can see that our model achieves the best performance among all models with only 7B parameters. Notably, the pass@1 of our model surpasses most pass@5 metric of other models.
-            </p>
-            <img src="./static/images/rtllm_acc_vs_model_size.png">
-            We further plot the test-time scaling curves under varying token budgets. Notably, as the token length budget increases, our model demonstrates a faster growth rate in performance compared to DeepSeek-R1. When using estimated FLOPs as the metric, our model outperforms DeepSeek-R1 with fewer FLOPs, highlighting its superior efficiency in computation.
+
+            <!-- Figure-first presentation: Test-time scaling curves -->
+            <p>To characterize our model's efficiency, we first visualize the test-time scaling behavior under varying token budgets.</p>
             <div class="columns is-multiline">
-              <div class="column is-half"> <!-- 占50%宽度，可根据需求调整 -->
-                <img src="./static/images/rtllm_tts.png" alt="RTLLM TTS 结果">
-              </div>
-              <div class="column is-half">
-                <img src="./static/images/rtllm_tts_flops.png" alt="RTLLM TTS FLOPs 结果">
+              <div class="column is-full"> 
+                <figure class="has-text-centered">
+                  <div class="columns is-multiline">
+                    <div class="column is-half">
+                      <img src="./static/images/rtllm_tts.png" alt="RTLLM Inference Time vs Token Budget">
+                    </div>
+                    <div class="column is-half">
+                      <img src="./static/images/rtllm_tts_flops.png" alt="RTLLM Inference Time vs FLOPs Consumption">
+                    </div>
+                  </div>
+                  <!-- <figcaption class="caption mt-3 has-text-centered is-size-7 has-text-grey">
+                    Test-time scaling curves. Left: Inference time as a function of token length. Right: Inference time vs. estimated FLOPs consumption.
+                  </figcaption> -->
+                </figure>
               </div>
             </div>
+            <p>Notably, as the token length budget increases, our model demonstrates a faster performance growth rate compared to DeepSeek-R1. When measured by FLOPs consumption, our model achieves better results with fewer computational resources, highlighting its superior efficiency.</p>
+
+            <!-- Figure-second presentation: Accuracy vs Model Size -->
+            <p>To further demonstrate our model's performance advantages, we plot accuracy metrics against model size.</p>
+            <img src="./static/images/rtllm_acc_vs_model_size.png" alt="Model Accuracy vs Parameter Size">
+            <p>This figure shows both pass@1 (blue) and pass@5 (red) metrics. Our 7B-parameter model achieves state-of-the-art performance, with pass@1 accuracy surpassing most pass@5 metrics of larger models.</p>
+
+            <!-- Key accuracy metrics (before tables) -->
+            <p>
+              Quantitatively, our CodeV-R1 model achieves 68.6% and 72.9% pass@1 accuracy on VerilogEval v2 and RTLLM v1.1, respectively. On RTLLM v1.1, it outperforms previous state-of-the-art models by ~20%, and surpasses the 671B DeepSeek-R1 on both RTLLM v1.1 and v2.0.
+              The detailed results across benchmarks are shown in the following tables:
+            </p>
+            <img src="./static/images/result_v1.png" alt="VerilogEval v1 & RTLLM v1.1 Results">
+            <p>For VerilogEval v1 and RTLLM v1.1, we evaluate the models with *; other results are sourced from their respective papers.</p>
+            <img src="./static/images/result_v2.png" alt="VerilogEval v2 & RTLLM v2.0 Results">
+            <p>For VerilogEval v2 and RTLLM v2.0, we evaluate all models in this table. SR denotes Specification-to-RTL, and CC denotes Code Completion.</p>
           </div>
         </div>
       </div>
+    </div>
 
 
       <!-- <div class="columns is-centered">
@@ -324,7 +323,7 @@ print("Response:", response)
     <!-- <hr/> -->
     <!-- <section class="section" id="BibTeX"> -->
       <!-- <div class="columns is-centered"> -->
-        <div class="container content is-max-desktop">
+        <div class="container content is-max-desktop" style="margin-top: 3rem">
             <h2 class="title is-3"> BibTex </h2>
               <pre>
                 <code class="nohighlight" style="background-color: transparent; color: black; font-family: monospace;">
