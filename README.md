@@ -34,7 +34,7 @@ For the environment of reinforcement learning, please refer to `verl/README.md`.
 
 ## Testing
 
-Here is the link for our [CodeV-R1-distill-7B](https://huggingface.co/zhuyaoyu/CodeV-R1-Distill-Qwen-7B) and [CodeV-R1](https://huggingface.co/zhuyaoyu/CodeV-R1-Qwen-7B). Please refer to the README under `test/` for details for testing.
+Here is the link for our [CodeV-R1-distill](https://huggingface.co/zhuyaoyu/CodeV-R1-Distill-Qwen-7B) and [CodeV-R1](https://huggingface.co/zhuyaoyu/CodeV-R1-Qwen-7B). Please refer to the README under `test/` for details for testing.
 
 ## SFT Training
 
