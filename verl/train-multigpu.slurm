@@ -2,32 +2,21 @@
 
 #- Job parameters
 
-# (TODO)
-# Please modify job name
+#- Resources
+
+# Please modify your requirements, such as partition name, slurm QOS type, stdout and stderr paths, time limit, nodes, and gpus per node.
 
 #SBATCH -J train-rl              # The job name
 #SBATCH -o ret_one/%j.out        # Write the standard output to file named 'ret-<job_number>.out'
 #SBATCH -e ret_one/%j.err        # Write the standard error to file named 'ret-<job_number>.err'
-
-#- Resources
-
-# (TODO)
-# Please modify your requirements
-
-#SBATCH --mem=0
-#SBATCH --exclusive
 #SBATCH --ntasks-per-node=1          # Request P tasks per node
-###SBATCH --cpus-per-task=48           # Request Q core per task; means that P*Q cores per node
-
-# SBATCH
-#SBATCH -p r8nv-gpu-hw-80g               # Submit to 'r8nv-gpu-hw' Partitiion
+#SBATCH -p YOUR_SLURM_PARTITION
 #SBATCH -t 1-06:00:00                # Run for a maximum time of 0 days, 12 hours, 00 mins, 00 secs
 #SBATCH --nodes=2                    # Request N nodes
 #SBATCH --gres=gpu:8                 # Request M GPU per node
-#SBATCH --qos=gpu-normal             # Request QOS Type
-#SBATCH --constraint=A100_80G
-###SBATCH --nodelist=r8a100-d[03,04]
-##SBATCH --exclude=r8a100-d[05,07]
+#SBATCH --qos=YOUR_SLURM_QOS_TYPE
+#SBATCH --mem=0
+#SBATCH --exclusive
 
 
 #==========================================================================#

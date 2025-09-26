@@ -5,13 +5,14 @@
 # and read the README and F.A.Q. at the end of this document.              #
 #==========================================================================#
 
+# The number of GPUs is SLURM_NNODES * USER_GPUS_PER_NODE
 export SLURM_JOBID=1
 export SLURM_NNODES=1
 export SLURM_NTASKS_PER_NODE=1
 export USER_GPUS_PER_NODE=8          # <--------------------- Modify it in time!
 
-# export MASTER_ADDR=10.21.0.3
-export MASTER_ADDR=10.21.0.12
+# Remember to modify MASTER_ADDR
+export MASTER_ADDR=YOUR_SERVER_IP
 export MASTER_PORT=55555
 
 export SLURM_JOB_NUM_NODES=$SLURM_NNODES
