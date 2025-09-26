@@ -5,7 +5,15 @@
 
 CodeV-R1 is an innovative open-source Large Language Model (LLM) specifically designed for the generation of high-quality Verilog code, addressing the challenges faced by existing models in this domain.
 
-Currently we open-source our code for model testing. The code for SFT and RL training are coming soon!
+We have open-sourced our code for model testing, SFT and RL training. In the meantime, we have also open-sourced our SFT and RL training data in Huggingface. Below are the links:
+
+- Webpage: https://iprc-dip.github.io/CodeV-R1/
+
+- Paper: [CodeV-R1: Reasoning-Enhanced Verilog Generation](https://arxiv.org/abs/2505.24183)
+
+- Models: [CodeV-R1](https://huggingface.co/zhuyaoyu/CodeV-R1-Qwen-7B) and [CodeV-R1-distill](https://huggingface.co/zhuyaoyu/CodeV-R1-Distill-Qwen-7B)
+
+- Data: [CodeV-R1-dataset](https://huggingface.co/datasets/zhuyaoyu/CodeV-R1-dataset)
 
 ## Environments
 
@@ -26,7 +34,7 @@ For the environment of reinforcement learning, please refer to `verl/README.md`.
 
 ## Testing
 
-Here is the link for our [CodeV-R1-distill-7B](https://huggingface.co/zhuyaoyu/CodeV-R1-Distill-Qwen-7B) and [CodeV-R1-distill-7B](https://huggingface.co/zhuyaoyu/CodeV-R1-Qwen-7B). Please refer to the README under `test/` for details for testing.
+Here is the link for our [CodeV-R1-distill-7B](https://huggingface.co/zhuyaoyu/CodeV-R1-Distill-Qwen-7B) and [CodeV-R1](https://huggingface.co/zhuyaoyu/CodeV-R1-Qwen-7B). Please refer to the README under `test/` for details for testing.
 
 ## SFT Training
 
