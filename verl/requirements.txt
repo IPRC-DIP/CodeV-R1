@@ -1,0 +1,28 @@
+# requirements.txt records the full set of dependencies for development
+accelerate
+click==8.2.1
+codetiming
+datasets
+dill
+# flash-attn==2.7.4.post1
+hydra-core
+liger-kernel
+numpy
+pandas
+peft
+pyarrow>=15.0.0
+pybind11
+pylatexenc
+ray[default]
+tensordict
+torchdata
+transformers
+vllm==0.8.3
+wandb
+langchain
+langchain-community
+langchain-core
+langchain-nvidia-ai-endpoints
+langchain-openai
+langchain-text-splitters
+langsmith

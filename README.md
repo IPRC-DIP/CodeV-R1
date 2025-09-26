@@ -22,9 +22,19 @@ pip install -e testbench/VerilogEval_v1.0.0/
 pip install langchain langchain-community langchain-core langchain-nvidia-ai-endpoints langchain-openai langchain-text-splitters langsmith
 ```
 
+For the environment of reinforcement learning, please refer to `verl/README.md`.
+
 ## Testing
 
 Here is the link for our [CodeV-R1-distill-7B](https://huggingface.co/zhuyaoyu/CodeV-R1-Distill-Qwen-7B) and [CodeV-R1-distill-7B](https://huggingface.co/zhuyaoyu/CodeV-R1-Qwen-7B). Please refer to the README under `test/` for details for testing.
+
+## SFT Training
+
+We use LLaMA-Factory to conduct SFT training, and we provide our training configuration in `sft/`. Please refer to `sft/README.md` for more details.
+
+## RL Training
+
+We use verl to conduct RL training, and we open-source our RL training code in `verl/`. Please refer to `verl/README.md` for more details.
 
 ## Citation
 
