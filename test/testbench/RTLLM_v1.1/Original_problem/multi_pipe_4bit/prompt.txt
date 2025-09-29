@@ -1,0 +1,11 @@
+`timescale 1ns/1ns
+module multi_pipe_4bit#(
+	parameter size = 4
+)(
+	input 						clk 		,   
+	input 						rst_n		,
+	input	[size-1:0]			mul_a		,
+	input	[size-1:0]			mul_b		,
+ 
+ 	output	reg	[size*2-1:0]	mul_out		
+);

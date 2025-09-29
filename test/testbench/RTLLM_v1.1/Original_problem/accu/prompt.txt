@@ -1,0 +1,11 @@
+`timescale 1ns/1ns
+
+module accu(
+    input               clk         ,   
+    input               rst_n       ,
+    input       [7:0]   data_in     ,
+    input               valid_in     ,
+ 
+    output  reg         valid_out     ,
+    output  reg [9:0]   data_out
+);

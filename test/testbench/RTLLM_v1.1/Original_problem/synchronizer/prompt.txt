@@ -1,0 +1,10 @@
+module synchronizer(
+	input 				clk_a	, 
+	input 				clk_b	,   
+	input 				arstn	,
+	input				brstn   ,
+	input		[3:0]	data_in	,
+	input               data_en ,
+
+	output reg  [3:0] 	dataout
+);

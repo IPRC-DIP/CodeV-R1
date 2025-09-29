@@ -1,0 +1,1 @@
+module freq_div (CLK_in,CLK_50,CLK_10,CLK_1,RST);

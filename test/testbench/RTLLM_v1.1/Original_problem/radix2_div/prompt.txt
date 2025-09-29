@@ -1,0 +1,13 @@
+`timescale 1ns/1ps
+module radix2_div(
+    input wire clk,
+    input wire rst,
+    input wire [7:0] dividend,    
+    input wire [7:0] divisor,    
+    input wire sign,       
+
+    input wire opn_valid,   
+    output reg res_valid,   
+    input wire res_ready,   
+    output wire [15:0] result
+);

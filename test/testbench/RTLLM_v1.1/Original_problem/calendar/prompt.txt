@@ -1,0 +1,1 @@
+module calendar(CLK,RST,Hours,Mins,Secs);

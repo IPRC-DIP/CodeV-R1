@@ -1,0 +1,9 @@
+`timescale 1ns/1ns
+module edge_detect(
+	input clk,
+	input rst_n,
+	input a,
+	
+	output reg rise,
+	output reg down
+);
