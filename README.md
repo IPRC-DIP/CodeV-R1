@@ -44,6 +44,10 @@ We use LLaMA-Factory to conduct SFT training, and we provide our training config
 
 We use verl to conduct RL training, and we open-source our RL training code in `verl/`. Please refer to `verl/README.md` for more details.
 
+## Automated Testbench Generation
+
+We have provided the code for automated testbench generation in https://github.com/IPRC-DIP/CodeV-R1/tree/main/verl/verl/utils/reward_score/codev_eval_toolkit inside the RL code.
+
 ## Citation
 
 **Arxiv:** https://arxiv.org/abs/2505.24183
