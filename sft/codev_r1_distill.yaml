@@ -9,7 +9,7 @@ finetuning_type: full
 deepspeed: examples/deepspeed/ds_z3_offload_config.json  # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
 
 ### dataset
-dataset: train_data
+dataset: codev_r1_sft
 template: qwen
 cutoff_len: 16384
 # max_samples: 1000
